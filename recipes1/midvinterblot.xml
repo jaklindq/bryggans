@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><RECIPES>
+<RECIPE>
+ <NAME>Midvinterblot</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>All Grain</TYPE>
+ <BREWER>Bryggans</BREWER>
+ <ASST_BREWER></ASST_BREWER>
+ <BATCH_SIZE>34.0689024</BATCH_SIZE>
+ <BOIL_SIZE>24.4917554</BOIL_SIZE>
+ <BOIL_TIME>60.0000000</BOIL_TIME>
+ <EFFICIENCY>72.0000000</EFFICIENCY>
+ <HOPS>
+<HOP>
+ <NAME>Cascade</NAME>
+ <VERSION>1</VERSION>
+ <ORIGIN>U.S.</ORIGIN>
+ <ALPHA>5.5000000</ALPHA>
+ <AMOUNT>0.0425242</AMOUNT>
+ <USE>Boil</USE>
+ <TIME>60.0000000</TIME>
+ <NOTES>A hops with Northern Brewers Heritage
+Used for: American ales and lagers
+Aroma: Strong spicy, floral, grapefruit character
+Substitutes: Centennial
+Examples: Sierra Nevada Pale Ale, Anchor Liberty Ale</NOTES>
+ <TYPE>Both</TYPE>
+ <FORM>Pellet</FORM>
+ <BETA>6.0000000</BETA>
+ <HSI>50.0000000</HSI>
+ <DISPLAY_AMOUNT>1.50 oz</DISPLAY_AMOUNT>
+ <INVENTORY>0.00 oz</INVENTORY>
+ <DISPLAY_TIME>60.0 min</DISPLAY_TIME>
+</HOP>
+<HOP>
+ <NAME>Hallertauer</NAME>
+ <VERSION>1</VERSION>
+ <ORIGIN>Germany</ORIGIN>
+ <ALPHA>4.8000000</ALPHA>
+ <AMOUNT>0.0155922</AMOUNT>
+ <USE>Boil</USE>
+ <TIME>10.0000000</TIME>
+ <NOTES>Used for: German Ales, German/US/Canadian Lagers, Wheat Beers
+Aroma: Pleasant, mild spicy flavor, clean, neutral flavor
+Substitutes: Crystal, Liberty, Hallertauer Mittelfrueh</NOTES>
+ <TYPE>Aroma</TYPE>
+ <FORM>Pellet</FORM>
+ <BETA>4.0000000</BETA>
+ <HSI>50.0000000</HSI>
+ <DISPLAY_AMOUNT>0.55 oz</DISPLAY_AMOUNT>
+ <INVENTORY>0.00 oz</INVENTORY>
+ <DISPLAY_TIME>10.0 min</DISPLAY_TIME>
+</HOP>
+</HOPS>
+
+ <FERMENTABLES>
+<FERMENTABLE>
+ <NAME>Pale Malt (2 Row) US</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Grain</TYPE>
+ <AMOUNT>4.5359200</AMOUNT>
+ <YIELD>79.0000000</YIELD>
+ <COLOR>2.0000000</COLOR>
+ <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+ <ORIGIN>US</ORIGIN>
+ <SUPPLIER></SUPPLIER>
+ <NOTES>Base malt for all beer styles</NOTES>
+ <COARSE_FINE_DIFF>1.5000000</COARSE_FINE_DIFF>
+ <MOISTURE>4.0000000</MOISTURE>
+ <DIASTATIC_POWER>140.0000000</DIASTATIC_POWER>
+ <PROTEIN>12.3000000</PROTEIN>
+ <MAX_IN_BATCH>100.0000000</MAX_IN_BATCH>
+ <RECOMMEND_MASH>TRUE</RECOMMEND_MASH>
+ <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+ <DISPLAY_AMOUNT>10 lbs</DISPLAY_AMOUNT>
+ <INVENTORY>0,0 oz</INVENTORY>
+ <POTENTIAL>1.0363400</POTENTIAL>
+ <DISPLAY_COLOR>2.0 SRM</DISPLAY_COLOR>
+ <EXTRACT_SUBSTITUTE>Pale Liquid Extract</EXTRACT_SUBSTITUTE>
+</FERMENTABLE>
+<FERMENTABLE>
+ <NAME>Caramel/Crystal Malt - 40L</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Grain</TYPE>
+ <AMOUNT>0.4535920</AMOUNT>
+ <YIELD>74.0000000</YIELD>
+ <COLOR>40.0000000</COLOR>
+ <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+ <ORIGIN>US</ORIGIN>
+ <SUPPLIER></SUPPLIER>
+ <NOTES>Adds body, color and improves head retention.
+Also called &#34;Crystal&#34; malt.</NOTES>
+ <COARSE_FINE_DIFF>1.5000000</COARSE_FINE_DIFF>
+ <MOISTURE>4.0000000</MOISTURE>
+ <DIASTATIC_POWER>0.0000000</DIASTATIC_POWER>
+ <PROTEIN>13.2000000</PROTEIN>
+ <MAX_IN_BATCH>20.0000000</MAX_IN_BATCH>
+ <RECOMMEND_MASH>FALSE</RECOMMEND_MASH>
+ <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+ <DISPLAY_AMOUNT>1 lbs</DISPLAY_AMOUNT>
+ <INVENTORY>0,0 oz</INVENTORY>
+ <POTENTIAL>1.0340400</POTENTIAL>
+ <DISPLAY_COLOR>40.0 SRM</DISPLAY_COLOR>
+ <EXTRACT_SUBSTITUTE></EXTRACT_SUBSTITUTE>
+</FERMENTABLE>
+<FERMENTABLE>
+ <NAME>Wheat Malt, Ger</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Grain</TYPE>
+ <AMOUNT>0.1133980</AMOUNT>
+ <YIELD>84.0000000</YIELD>
+ <COLOR>2.0000000</COLOR>
+ <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+ <ORIGIN>Germany</ORIGIN>
+ <SUPPLIER></SUPPLIER>
+ <NOTES>Malted wheat base for use in all wheat styles</NOTES>
+ <COARSE_FINE_DIFF>1.5000000</COARSE_FINE_DIFF>
+ <MOISTURE>4.0000000</MOISTURE>
+ <DIASTATIC_POWER>95.0000000</DIASTATIC_POWER>
+ <PROTEIN>12.5000000</PROTEIN>
+ <MAX_IN_BATCH>60.0000000</MAX_IN_BATCH>
+ <RECOMMEND_MASH>TRUE</RECOMMEND_MASH>
+ <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+ <DISPLAY_AMOUNT>4,0 oz</DISPLAY_AMOUNT>
+ <INVENTORY>0,0 oz</INVENTORY>
+ <POTENTIAL>1.0386400</POTENTIAL>
+ <DISPLAY_COLOR>2.0 SRM</DISPLAY_COLOR>
+ <EXTRACT_SUBSTITUTE>Wheat Liquid Extract</EXTRACT_SUBSTITUTE>
+</FERMENTABLE>
+<FERMENTABLE>
+ <NAME>Roasted Barley</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Grain</TYPE>
+ <AMOUNT>0.0362874</AMOUNT>
+ <YIELD>55.0000000</YIELD>
+ <COLOR>300.0000000</COLOR>
+ <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+ <ORIGIN>US</ORIGIN>
+ <SUPPLIER></SUPPLIER>
+ <NOTES>Roasted at high temperature to create a burnt, grainy, coffee like flavor.
+Imparts a red to deep brown color to beer, and very strong roasted flavor.
+Use 2-4% in Brown ales to add a nutty flavor, or 3-10% in Porters and Stouts for coffee flavor.</NOTES>
+ <COARSE_FINE_DIFF>1.5000000</COARSE_FINE_DIFF>
+ <MOISTURE>5.0000000</MOISTURE>
+ <DIASTATIC_POWER>0.0000000</DIASTATIC_POWER>
+ <PROTEIN>13.2000000</PROTEIN>
+ <MAX_IN_BATCH>10.0000000</MAX_IN_BATCH>
+ <RECOMMEND_MASH>FALSE</RECOMMEND_MASH>
+ <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+ <DISPLAY_AMOUNT>1,3 oz</DISPLAY_AMOUNT>
+ <INVENTORY>0,0 oz</INVENTORY>
+ <POTENTIAL>1.0253000</POTENTIAL>
+ <DISPLAY_COLOR>300.0 SRM</DISPLAY_COLOR>
+ <EXTRACT_SUBSTITUTE></EXTRACT_SUBSTITUTE>
+</FERMENTABLE>
+</FERMENTABLES>
+
+ <MISCS>
+<MISC>
+ <NAME>Ginger Root</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Herb</TYPE>
+ <USE>Boil</USE>
+ <AMOUNT>0.028349</AMOUNT>
+ <TIME>12.00</TIME>
+ <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+ <USE_FOR>Holiday Beer</USE_FOR>
+ <NOTES>Adds distinctive ginger flavor for Ginger Ales, Holiday Beers.  Fresh grated ginger root from the grocer is best.  As little as 1/2 ounce per 5 gallons is noticable, but up to 4 oz can be used for ginger ales.</NOTES>
+ <DISPLAY_AMOUNT>1.00 oz</DISPLAY_AMOUNT>
+ <INVENTORY>0.00 oz</INVENTORY>
+ <DISPLAY_TIME>12.0 mins</DISPLAY_TIME>
+ <BATCH_SIZE>5.00 gal</BATCH_SIZE>
+</MISC>
+<MISC>
+ <NAME>Cinnamon Stick</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Spice</TYPE>
+ <USE>Boil</USE>
+ <AMOUNT>0.014175</AMOUNT>
+ <TIME>5.00</TIME>
+ <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+ <USE_FOR>Holiday Beer</USE_FOR>
+ <NOTES>Used to add cinnamon flavor to holiday beers.  Goes well with ginger, honey and orange flavors.  Add one stick 5 minutes from the end of the boil.</NOTES>
+ <DISPLAY_AMOUNT>0.50 oz</DISPLAY_AMOUNT>
+ <INVENTORY>0.00 oz</INVENTORY>
+ <DISPLAY_TIME>5.0 mins</DISPLAY_TIME>
+ <BATCH_SIZE>5.00 gal</BATCH_SIZE>
+</MISC>
+</MISCS>
+
+ <YEASTS>
+<YEAST>
+ <NAME>London Ale Yeast</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Ale</TYPE>
+ <FORM>Liquid</FORM>
+ <AMOUNT>0.1242095</AMOUNT>
+ <AMOUNT_IS_WEIGHT>FALSE</AMOUNT_IS_WEIGHT>
+ <LABORATORY>Wyeast Labs</LABORATORY>
+ <PRODUCT_ID>1028</PRODUCT_ID>
+ <MIN_TEMPERATURE>15.5555556</MIN_TEMPERATURE>
+ <MAX_TEMPERATURE>22.2222222</MAX_TEMPERATURE>
+ <FLOCCULATION>Medium</FLOCCULATION>
+ <ATTENUATION>75.0000000</ATTENUATION>
+ <NOTES>Dry finish, bold, rich flavor, some fruit profile and a crisp finish.</NOTES>
+ <BEST_FOR>English Ales, Bitters, IPAs, Brown Ale</BEST_FOR>
+ <MAX_REUSE>5</MAX_REUSE>
+ <TIMES_CULTURED>0</TIMES_CULTURED>
+ <ADD_TO_SECONDARY>FALSE</ADD_TO_SECONDARY>
+ <DISPLAY_AMOUNT>124.21 ml</DISPLAY_AMOUNT>
+ <DISP_MIN_TEMP>60.0 F</DISP_MIN_TEMP>
+ <DISP_MAX_TEMP>72.0 F</DISP_MAX_TEMP>
+ <INVENTORY>0.0 pkg</INVENTORY>
+ <CULTURE_DATE>14 Jun 2003</CULTURE_DATE>
+</YEAST>
+</YEASTS>
+
+ 
+ <STYLE>
+ <NAME>Winter Seasonal Beer</NAME>
+ <VERSION>1</VERSION>
+ <CATEGORY>Spiced Beer</CATEGORY>
+ <CATEGORY_NUMBER>30</CATEGORY_NUMBER>
+ <STYLE_LETTER>C</STYLE_LETTER>
+ <STYLE_GUIDE>BJCP 2015</STYLE_GUIDE>
+ <TYPE>Mixed</TYPE>
+ <OG_MIN>1.0200000</OG_MIN>
+ <OG_MAX>1.0900000</OG_MAX>
+ <FG_MIN>1.0060000</FG_MIN>
+ <FG_MAX>1.0160000</FG_MAX>
+ <IBU_MIN>5.0000000</IBU_MIN>
+ <IBU_MAX>50.0000000</IBU_MAX>
+ <COLOR_MIN>7.0000000</COLOR_MIN>
+ <COLOR_MAX>50.0000000</COLOR_MAX>
+ <CARB_MIN>2.0000000</CARB_MIN>
+ <CARB_MAX>3.0000000</CARB_MAX>
+ <ABV_MAX>10.0000000</ABV_MAX>
+ <ABV_MIN>5.0000000</ABV_MIN>
+ <NOTES>Winter Seasonal Beers are beers that suggest cold weather and the Christmas holiday season, and may include holiday spices, specialty sugars, and other products that are reminiscent of mulling spices or Christmas holiday desserts. See the Introduction to Specialty-Type Beer section for additional comments, particularly on evaluating the balance of added ingredients with the base beer. A stronger, darker, spiced beer that often has a rich body and warming finish suggesting a good accompaniment for the cold winter season. Entry Instructions: The entrant must specify a base style, but the declared style does not have to be a Classic Style. The entrant must specify the type of spices, sugars, fruits, or additional fermentables used; individual ingredients do not need to be specified if a well-known blend of spices is used (e.g., mulling spice). History: Throughout history, beer of a somewhat higher alcohol content and richness has been enjoyed during the winter holidays, when old friends get together to enjoy the season. Many breweries produce unique seasonal offerings that may be darker, stronger, spiced, or otherwise more characterful than their normal beers. Spiced versions are an American or Belgian tradition, since English or German breweries traditionally do not use spices in their beer. ABV is generally above 6%, and most examples are somewhat dark in color.</NOTES>
+ <PROFILE>OG, FG, IBUs, SRM and ABV will vary depending on the underlying base beer. Aroma: A wide range of aromatics is possible, although many examples are reminiscent of Christmas cookies, gingerbread, English-type Christmas pudding, evergreen trees, or mulling spices. Any combination of aromatics that suggests the holiday season is welcome. The base beer style often has a malty profile that supports the balanced presentation of the aromatics from spices and possibly other special ingredients. Additional fermentables (e.g., honey, molasses, maple syrup, etc.) may lend their own unique aromatics. Hop aromatics are often absent, subdued, or slightly spicy. Some fruit character (often of dried citrus peel, or dried fruit such as raisins or plums) is optional but acceptable. Alcohol aromatics may be found in some examples, but this character should be restrained. The overall aroma should be balanced and harmonious, and is often fairly complex and inviting. Appearance: Generally medium amber to very dark brown (darker versions are more common). Usually clear, although darker versions may be virtually opaque. Some chill haze is acceptable. Generally has a well-formed head that is often off-white to tan. Flavor: Many interpretations are possible; allow for brewer creativity as long as the resulting product is balanced and provides some spice presentation. Spices associated with the holiday season are typical (as mentioned in the Aroma section). The spices and optional fermentables should be supportive and blend well with the base beer style. Rich, malty and/or sweet malt-based flavors are common, and may include caramel, toast, nutty, or chocolate flavors. May include some dried fruit or dried fruit peel flavors such as raisin, plum, fig, orange peel or lemon peel. May include distinctive flavors from specific fermentables (molasses, honey, brown sugar, etc.), although these elements are not required. A light evergreen tree character is optional but found in some examples. The wide range of special ingredients should be supportive and balanced, not so prominent as to overshadow the base beer. Bitterness and hop flavor are generally restrained so as to not interfere with the spices and special ingredients. Generally finishes rather full and satisfying, and often has some alcohol flavor. Roasted malt characteristics are rare, and not usually stronger than chocolate. Mouthfeel: A wide range of interpretations is possible. Body is generally medium to full, and a certain malty chewiness is often present. Moderately low to moderately high carbonation is typical. Many examples will show some well-aged, warming alcohol content, but without being overly hot. The beers do not have to be overly strong to show some warming effects. Comments: Overall balance is the key to presenting a well-made Winter Seasonal Beer. The special ingredients should complement the base beer and not overwhelm it. The brewer should recognize that some combinations of base beer styles and special ingredients work well together while others do not make for harmonious combinations. If the base beer is a classic style, the original style should come through in aroma and flavor. Whenever spices, herbs or additional fermentables are declared, each should be noticeable and distinctive in its own way (although not necessarily individually identifiable; balanced with the other ingredients is still critical). Whenever spices, herbs or additional fermentables are declared, each should be noticeable and distinctive in its own way (although not necessarily individually identifiable; balanced with the other ingredients is still critical) &#8211; in other words, the beer should read as a spiced beer but without having to tell that specific spices are present (even if declared).</PROFILE>
+ <INGREDIENTS>Varies with base style. Generally ales, although some dark strong lagers exist. Spices are required, and often include those evocative of the Christmas season (e.g., allspice, nutmeg, cinnamon, cloves, ginger) but any combination is possible and creativity is encouraged. Fruit peel (e.g., oranges, lemon) may be used, as may subtle additions of other fruits. Flavorful adjuncts are often used (e.g., molasses, treacle, invert sugar, brown sugar, honey, maple syrup, etc.).</INGREDIENTS>
+ <EXAMPLES>Anchor Our Special Ale, Goose Island Christmas Ale, Great Lakes Christmas Ale, Harpoon Winter Warmer, Lakefront Holiday Spice Lager Beer, Weyerbacher Winter Ale</EXAMPLES>
+ <DISPLAY_OG_MIN>1.020 SG</DISPLAY_OG_MIN>
+ <DISPLAY_OG_MAX>1.090 SG</DISPLAY_OG_MAX>
+ <DISPLAY_FG_MIN>1.006 SG</DISPLAY_FG_MIN>
+ <DISPLAY_FG_MAX>1.016 SG</DISPLAY_FG_MAX>
+ <DISPLAY_COLOR_MIN>7.0 SRM</DISPLAY_COLOR_MIN>
+ <DISPLAY_COLOR_MAX>50.0 SRM</DISPLAY_COLOR_MAX>
+ <OG_RANGE>1,020-1,090 SG</OG_RANGE>
+ <FG_RANGE>1,006-1,016 SG</FG_RANGE>
+ <IBU_RANGE>5,0-50,0 IBUs</IBU_RANGE>
+ <CARB_RANGE>2,00-3,00 Vols</CARB_RANGE>
+ <COLOR_RANGE>7,0-50,0 SRM</COLOR_RANGE>
+ <ABV_RANGE>5,00-10,00 %</ABV_RANGE>
+</STYLE>
+
+ <EQUIPMENT>
+ <NAME>Pot ( 3 Gal/11.4 L) - Extract</NAME>
+ <VERSION>1</VERSION>
+ <BOIL_SIZE>24.4917554</BOIL_SIZE>
+ <BATCH_SIZE>34.0689024</BATCH_SIZE>
+ <TUN_VOLUME>11.3563008</TUN_VOLUME>
+ <TUN_WEIGHT>1.3607760</TUN_WEIGHT>
+ <TUN_SPECIFIC_HEAT>0.1200000</TUN_SPECIFIC_HEAT>
+ <TOP_UP_WATER>11.3563008</TOP_UP_WATER>
+ <TRUB_CHILLER_LOSS>0.0000000</TRUB_CHILLER_LOSS>
+ <EVAP_RATE>3.4003091</EVAP_RATE>
+ <BOIL_TIME>60.0000000</BOIL_TIME>
+ <CALC_BOIL_VOLUME>TRUE</CALC_BOIL_VOLUME>
+ <LAUTER_DEADSPACE>0.0000000</LAUTER_DEADSPACE>
+ <TOP_UP_KETTLE>0.0000000</TOP_UP_KETTLE>
+ <HOP_UTILIZATION>100.0000000</HOP_UTILIZATION>
+ <COOLING_LOSS_PCT>4.0000000</COOLING_LOSS_PCT>
+ <NOTES>Simple Brew Pot with a 3 Gallon Capacity - leaving a workable boil volume of around 2.5 gal.  Used for extract or partial mash brewing.</NOTES>
+ <DISPLAY_BOIL_SIZE>6.47 gal</DISPLAY_BOIL_SIZE>
+ <DISPLAY_BATCH_SIZE>9.00 gal</DISPLAY_BATCH_SIZE>
+ <DISPLAY_TUN_VOLUME>3.00 gal</DISPLAY_TUN_VOLUME>
+ <DISPLAY_TUN_WEIGHT>3 lbs</DISPLAY_TUN_WEIGHT>
+ <DISPLAY_TOP_UP_WATER>3.00 gal</DISPLAY_TOP_UP_WATER>
+ <DISPLAY_TRUB_CHILLER_LOSS>0.00 gal</DISPLAY_TRUB_CHILLER_LOSS>
+ <DISPLAY_LAUTER_DEADSPACE>0.00 gal</DISPLAY_LAUTER_DEADSPACE>
+ <DISPLAY_TOP_UP_KETTLE>0.00 gal</DISPLAY_TOP_UP_KETTLE>
+</EQUIPMENT>
+
+ <MASH>
+ <NAME>Single Infusion, Light Body, No Mash Out</NAME>
+ <VERSION>1</VERSION>
+ <GRAIN_TEMP>22.2222222</GRAIN_TEMP>
+ <TUN_TEMP>22.2222222</TUN_TEMP>
+ <SPARGE_TEMP>75.5555556</SPARGE_TEMP>
+ <PH>5.4000000</PH>
+ <TUN_WEIGHT>48.0000000</TUN_WEIGHT>
+ <TUN_SPECIFIC_HEAT>0.1200000</TUN_SPECIFIC_HEAT>
+ <EQUIP_ADJUST>TRUE</EQUIP_ADJUST>
+ <NOTES>Simple single infusion mash for use with most modern well modified grains (about 95% of the time).</NOTES>
+ <DISPLAY_GRAIN_TEMP>72.0 F</DISPLAY_GRAIN_TEMP>
+ <DISPLAY_TUN_TEMP>72.0 F</DISPLAY_TUN_TEMP>
+ <DISPLAY_SPARGE_TEMP>168.0 F</DISPLAY_SPARGE_TEMP>
+ <DISPLAY_TUN_WEIGHT>3 lbs</DISPLAY_TUN_WEIGHT>
+<MASH_STEPS>
+<MASH_STEP>
+ <NAME>Mash In</NAME>
+ <VERSION>1</VERSION>
+ <TYPE>Infusion</TYPE>
+ <INFUSE_AMOUNT>13.4028008</INFUSE_AMOUNT>
+ <STEP_TIME>75.0000000</STEP_TIME>
+ <STEP_TEMP>65.5555556</STEP_TEMP>
+ <RAMP_TIME>2.0000000</RAMP_TIME>
+ <END_TEMP>65.5555556</END_TEMP>
+ <DESCRIPTION>Add 14,16 qt of water at 162,3 F</DESCRIPTION>
+ <WATER_GRAIN_RATIO>1,250 qt/lb</WATER_GRAIN_RATIO>
+ <DECOCTION_AMT>0.00 qt</DECOCTION_AMT>
+ <INFUSE_TEMP>162.3 F</INFUSE_TEMP>
+ <DISPLAY_STEP_TEMP>150.0 F</DISPLAY_STEP_TEMP>
+ <DISPLAY_INFUSE_AMT>14.16 qt</DISPLAY_INFUSE_AMT>
+</MASH_STEP>
+</MASH_STEPS>
+
+</MASH>
+
+ <NOTES></NOTES>
+ <TASTE_NOTES></TASTE_NOTES>
+ <TASTE_RATING>30.0000000</TASTE_RATING>
+ <OG>1.0460000</OG>
+ <FG>1.0100000</FG>
+ <CARBONATION>2.5000000</CARBONATION>
+ <FERMENTATION_STAGES>2</FERMENTATION_STAGES>
+ <PRIMARY_AGE>4.0000000</PRIMARY_AGE>
+ <PRIMARY_TEMP>19.4444444</PRIMARY_TEMP>
+ <SECONDARY_AGE>10.0000000</SECONDARY_AGE>
+ <SECONDARY_TEMP>19.4444444</SECONDARY_TEMP>
+ <TERTIARY_AGE>7.0000000</TERTIARY_AGE>
+ <AGE>30.0000000</AGE>
+ <AGE_TEMP>18.3333333</AGE_TEMP>
+ <CARBONATION_USED>Keg with 14,89 PSI</CARBONATION_USED>
+ <FORCED_CARBONATION>FALSE</FORCED_CARBONATION>
+ <PRIMING_SUGAR_NAME>Forced Carbonation</PRIMING_SUGAR_NAME>
+ <PRIMING_SUGAR_EQUIV>1.0000000</PRIMING_SUGAR_EQUIV>
+ <KEG_PRIMING_FACTOR>0.5000000</KEG_PRIMING_FACTOR>
+ <CARBONATION_TEMP>7.2222222</CARBONATION_TEMP>
+ <DISPLAY_CARB_TEMP>45.0 F</DISPLAY_CARB_TEMP>
+ <DATE>23 Sep 2017</DATE>
+ <EST_OG>1.033 SG</EST_OG>
+ <EST_FG>1.007 SG</EST_FG>
+ <EST_COLOR>6.9 SRM</EST_COLOR>
+ <IBU>20.2 IBUs</IBU>
+ <IBU_METHOD>Tinseth</IBU_METHOD>
+ <EST_ABV>3.4 %</EST_ABV>
+ <ABV>4.7 %</ABV>
+ <ACTUAL_EFFICIENCY>56.2 %</ACTUAL_EFFICIENCY>
+ <CALORIES>151.6 kcal/12oz</CALORIES>
+ <DISPLAY_BATCH_SIZE>9.00 gal</DISPLAY_BATCH_SIZE>
+ <DISPLAY_BOIL_SIZE>6.47 gal</DISPLAY_BOIL_SIZE>
+ <DISPLAY_OG>1.046 SG</DISPLAY_OG>
+ <DISPLAY_FG>1.010 SG</DISPLAY_FG>
+ <DISPLAY_PRIMARY_TEMP>67.0 F</DISPLAY_PRIMARY_TEMP>
+ <DISPLAY_SECONDARY_TEMP>67.0 F</DISPLAY_SECONDARY_TEMP>
+ <DISPLAY_TERTIARY_TEMP>65.0 F</DISPLAY_TERTIARY_TEMP>
+ <DISPLAY_AGE_TEMP>65.0 F</DISPLAY_AGE_TEMP>
+</RECIPE>
+</RECIPES>
