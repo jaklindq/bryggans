@@ -102,7 +102,7 @@ class Recipe(object):
 
 
 def main():
-    recipe_file = '../../kalaslager.xml'
+    recipe_file = '../../xml/kalaslager.xml'
     recipe = Recipe()
     recipe.recipe_from_bxml(recipe_file)
 
