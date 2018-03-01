@@ -1,12 +1,27 @@
-class fermentable(object):
+class Hop(object):
+    """Hop class
+
+    Attributes:
+        name (str)
+        amount (float)
+        unit (str)
+        alpha (float): Hop alpha acid
+        time (float): Boiling time
+    """
 
     def __init__(self):
         self.name = None
         self.amount = None
-        self.type = None
+        self.unit = 'g'
+        self.alpha = None
         self.time = None
 
     def init_from_xml_obj(self, root):
+        """Parse etree object and look for HOPS tags
+
+        Args:
+            root (etree element): Root hops element
+        """
         for node in root:
             if node.tag == 'NAME':
                 if self.name is None:

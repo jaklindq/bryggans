@@ -1,12 +1,25 @@
-class Hop(object):
+class Fermentable(object):
+    """Fermentable class
 
+    Attributes:
+        name (str)
+        amount (float)
+        unit (str)
+        _type (str): Type of fermentable
+
+    """
     def __init__(self):
         self.name = None
         self.amount = None
-        self.alpha = None
-        self.time = None
+        self.unit = 'kg'
+        self._type = None  # Avoid conflict with restricted word "type"
 
     def init_from_xml_obj(self, root):
+        """Parse etree object and look for HOPS tags
+
+        Args:
+            root (etree element): Root hops element
+        """
         for node in root:
             if node.tag == 'NAME':
                 if self.name is None:
@@ -20,14 +33,8 @@ class Hop(object):
                 else:
                     print('{} already set: {}'.format(node.tag, self.amount))
 
-            if node.tag == 'ALPHA':
-                if self.alpha is None:
-                    self.alpha = float(node.text)
+            if node.tag == 'TYPE':
+                if self._type is None:
+                    self._type = node.text
                 else:
-                    print('{} already set: {}'.format(node.tag, self.alpha))
-
-            if node.tag == 'TIME':
-                if self.time is None:
-                    self.time = float(node.text)
-                else:
-                    print('{} already set: {}'.format(node.tag, self.time))
+                    print('{} already set: {}'.format(node.tag, self._type))

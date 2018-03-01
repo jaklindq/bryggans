@@ -1,8 +1,19 @@
+"""Handle recipes in beer-XML format"""
 from xml.etree import ElementTree as etree
 from hop import Hop
+from fermentable import Fermentable
 
 
 class Recipe(object):
+    """Recipe class
+
+    Attributes:
+        name (str): Recipe name
+        version (str): Version tag
+        batch_size (float): Drinkable volume
+        hop_list (list): List of hop objects
+        fermentables_list (list): List of fermentables objects
+    """
 
     def __init__(self):
         self.name = None
@@ -12,6 +23,11 @@ class Recipe(object):
         self.fermentables_list = None
 
     def recipe_from_bxml(self, xml_file_path):
+        """Parse beer-XML recipe file
+
+        Args:
+            xml_file_path (str): Path to recipe file
+        """
         root = self._parse_bxml(xml_file_path)
 
         for node in root:
@@ -42,12 +58,16 @@ class Recipe(object):
 
                 if child.tag == 'FERMENTABLES':
                     if self. fermentables_list is None:
-                        print('Adding fermentables')
-                        #  self._add_fermentables(child)
+                        self._add_fermentables(child)
                     else:
                         print('Multiple fermentables tags')
 
     def _add_hops(self, hops_root):
+        """Read HOPS tag and create Hop() instances
+
+        Args:
+            hops_root (etree element): Root element for all hops
+        """
         tmp_hops_list = []
         for node in hops_root:
             if node.tag == 'HOP':
@@ -60,53 +80,67 @@ class Recipe(object):
         self.hop_list = tmp_hops_list
 
     def _add_fermentables(self, fermentables_root):
+        """Read FERMENTABLES tag and create Fermentable() instances
+
+        Args:
+
+            fermentables_root (etree element): Root element for all fermentables
+        """
         tmp_fermentables_list = []
         for node in fermentables_root:
             if node.tag == 'FERMENTABLE':
-                fermentable = Malt()
-                fermentable.init_from_xml_obj()
+                fermentable = Fermentable()
+                fermentable.init_from_xml_obj(node)
                 tmp_fermentables_list.append(fermentable)
             else:
                 print('Erroneous tag')
 
         self.fermentables_list = tmp_fermentables_list
 
-
-    @staticmethod
-    def _sum_list(obj_list):
-        sum_dict = {}
-        if obj_list:
-            list_element_type = type(obj_list[0])
-            if all(isinstance(inst, list_element_type) for inst in obj_list):
-                for obj in obj_list:
-                    try:
-                        if obj.name in sum_dict.keys():
-                            sum_dict[obj.name] += obj.amount
-                        else:
-                            sum_dict[obj.name] = obj.amount
-                    except AttributeError as err:
-                        print('Wrong object type. {}'.format(err))
-
-
-        else:
-            print('Empty list')
-
-        return sum_dict
-
-
     @staticmethod
     def _parse_bxml(xml_file_path):
+        """Create etree object from xml-file
+
+        Args:
+            xml_file_path (str): Path to recipe file
+        """
         with open(xml_file_path, 'rt') as xml_file:
             tree = etree.parse(xml_file)
             return tree.getroot()
 
 
+def sum_list(obj_list):
+    """Aggregate an ingredient list to total amount
+
+    Takes any list of ingredient objects that has attributes amount and name
+
+    Args:
+        obj_list (list): List of ingredients objects
+    """
+    sum_dict = {}
+    if obj_list:
+        list_element_type = type(obj_list[0])
+        if all(isinstance(inst, list_element_type) for inst in obj_list):
+            for obj in obj_list:
+                try:
+                    if obj.name in sum_dict.keys():
+                        sum_dict[obj.name] += obj.amount
+                    else:
+                        sum_dict[obj.name] = obj.amount
+                except AttributeError as err:
+                    print('Wrong object type. {}'.format(err))
+
+    else:
+        print('Empty list')
+
+    return sum_dict
+
+
 def main():
-    recipe_file = '../../xml/kalaslager.xml'
+    """Main entry point for recipes"""
+    recipe_file = '/home/jakob/bryggans/Departement/Bryggeri/Recipe/xml/kalaslager.xml'
     recipe = Recipe()
     recipe.recipe_from_bxml(recipe_file)
-
-    print(recipe._sum_list(recipe.hop_list))
 
 
 if __name__ == '__main__':
