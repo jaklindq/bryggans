@@ -1,0 +1,17 @@
+Automationsdag 170317
+
+Lite mindre än ett dygn kunde vi hålla oss ifrån varandra. Jonathan kom hem till mig med fler kinesiska leksaker. Innan har vi lekt med min gamla Arduino för kommunikation mellan hårdvara (termometrar) och dator men nu hade Jonathan fått tag i en Raspberry Pi. En arduino är en mikrokontroller som är utmärkt för statisk hårdvarukommunikation, den har inget eget operativsystem utan man kan i princip bara ladda upp ett program i taget som exekveras i en loop tills någon bryter strömmen. En Raspberry Pi är mycket lik en riktig dator och med ett Linux OS, den är inte riktigt anpassad till hårdvarukontroll men är mycket mer flexibel med mjukvara och kommunikation. Den har faktiskt wifi-mottagare så om man har en riktig dator (ej Windows) så kan man kommunicera med den i realtid så fort den är inkopplad.
+
+Till Arudinon skrev jag ihop ett litet byggprogram i Python, det blev aldrig riktigt bra eftersom jag är usel på grafik. En bryggsession kunde se ut såhär:
+\wad screenshot.
+Vi hade till och med en julversion för att värma glögg. Förmodligen hade vi kommit ganska långt med Arduinon men det hade blivit besvärligt när man vill göra lite mer avancerade operationer därför känns det kul att ha Raspberryn att leka med redan innan vi skalar upp.
+
+Vi installerade Craftbeerpi på den, \wad. Det är ett open source, Python-program som med flaskmodulen hostar en lokal webserver på Raspberryn. Den webservern kan kommunicera med hårdvaran via Raspberryn samtidigt som den kan nås från alla enheter på nätverket vilket gör att det är grymt smidigt att styra bryggandet från datorn.
+
+Manuel som har skapat Craftbeerpi har gjort ett hästjobb med ett supersnyggt grafiskt gränssnitt där man kan starta bryggsessioner och tracka alla sensorer, relän, temperaturgrafer och tidtagare. Designen är lite mörk och deppig dock så vi ska nog modda det på sikt.
+
+I och med att det är open source så finns det inga begränsningar för vilka ändringar man får göra. Det vi har tänkt förändra är främst:
+
+\item Bryggans-anpassa grafiken. Vi båda har jobbat i kemisk processindustri och har sett enorma kontrollsystem så vi har planer på att göra en svg-bild av bryggverket, med tankar, ledningar och elektronik. Under en bryggning kan man sedan ta input från sensorer för att animera bilden med den och rita upp vätskenivåer, ventil- och pumplägen. Detta kan sen med en ganska enkel förlängning hostas på ett webhotell så att vem som helst kan följa en bryggning i realtid.
+
+I sommar tänkte jag sättma mig in i reglertekniken och se om Manuel har gjort ett bra jobb med regulatorerna eller inte. I och med att vi har lite mer beräkningskraft nu så hade det varit roligt att leka med lite mer avancerad kontroll. Egentligen är systemet alldeles för långsamt för att påverkas speciellt mycket av effektiv reglering men min hypotes är att man skulle kunna undvika overshoots under stora och snabba temperaturhöjningar. Framförallt är det roligt att göra något som är tekniskt krävande. På tal om det så funderar jag på om man skulle kunna köpa ett billigt litet grafikkort till Raspberryn som man kan lösa partiella differentialekvationer på och använda den outputen som modell till regulatorn. Skriver upp det på att göra-listan.

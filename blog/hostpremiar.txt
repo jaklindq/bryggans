@@ -1,0 +1,11 @@
+Uppstart av höstsäsongen
+
+Bryggans startade i helgen upp igen efter sommarens långa semester. Resultatet var ett haveri på alla fronter.
+Bryggeriet var isärplockat i molekyler så mycket tid gick åt till att skruva ihop allt. För övrigt är bryggeriet i sitt grundutförande väldigt mycket finare än innan. 
+Roffe 3-fas har satt in, ja bland annat 3-fas, men också en ny rostfri diskbänk med dubbla hoar, träbänk och nya luckor.
+
+Detta var första gången vi testade ny Craftbeer Pi-versionen på riktig hårdvara, den är fortfarande i beta och har lite buggar. Något var galet med ena termometern, och vi fick inte fart på reläet som styr värmen i kokkärlet. Ganska genant eftersom vi för första gången hade med oss en jästbryggare, Niklas. Som till råga på allt, åkt ned från Uppsala över helgen endast för att brygga med oss. Trots detta bryggde vi ändå en batch, då utan autostyrning utan gammal hederlig känsla och handtermometrar. En stout med smak av diskbänksrealism blev det. Vår första stout faktiskt. Vörten blev svart som natten men ganska klar. Ingen av oss älskar stout så vi gjorde en halv batch à 14l som nu står och jäser.
+
+På söndagen hade vi tänkt skita i allt och satt och skruvade på en CNC-laser istället, som inte heller fungerade om sanningen ska fram. I en paus gick Jakob ned och drog i kablarna och plötsligt hade vi båda temparna och Jonathan fixade reläet så allt var IGÅNG, som Christer Ulfbåge skulle sagt. Då lossnade kretskortet som vi reglerar pumpen med, landade på en slagborr så att matningsströmmen jordades för en sekund. Klipp till blixt och grillat kretskort.
+
+Utan pump är det inte alls roligt att brygga. Men, hade det varit kul att brygga öl hade de tagit inträde. Till vår heder böjde vi faktiskt ned huvudena och gjorde rätt för oss. Det blev en ganska habil lager som jäses i rumstemperatur (17-18C). Vår största batch hittills som klockade in på 50l.
