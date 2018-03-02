@@ -1,11 +1,15 @@
 G_TO_KG = 0.001
-IBS_TO_G = 2.0
-IBS_TO_KG = IBS_TO_G * G_TO_KG
+LBS_TO_G = 453.59237
+LBS_TO_KG = LBS_TO_G * G_TO_KG
+OZ_TO_GRAM = 28.3495231
+OZ_TO_KG = OZ_TO_GRAM * G_TO_KG
+OZ_TO_LBS = 0.0625
 
 CONVERSION_TABLE = {
-    'ibs': {'ibs': 1, 'g': IBS_TO_G, 'kg': IBS_TO_KG},
-    'g': {'ibs': 1/IBS_TO_G, 'g': 1, 'kg': G_TO_KG},
-    'kg': {'ibs': 1/IBS_TO_KG, 'g': 1/G_TO_KG, 'kg': 1}
+    'g': {'g': 1, 'kg': G_TO_KG, 'lbs': 1/LBS_TO_G, 'oz': 1/OZ_TO_GRAM},
+    'kg': {'g': 1/G_TO_KG, 'kg': 1, 'lbs': 1/LBS_TO_KG, 'oz': 1/OZ_TO_KG},
+    'lbs': {'g': LBS_TO_G, 'kg': LBS_TO_KG, 'lbs': 1, 'oz': 1/OZ_TO_LBS},
+    'oz': {'g': OZ_TO_GRAM, 'kg': OZ_TO_KG, 'lbs': OZ_TO_LBS, 'oz': 1},
 }
 
 

@@ -58,5 +58,6 @@ class Hop(object):
             new_unit (str): Resulting unit
         """
         # TODO: Make unit check
+        new_unit = new_unit.lower()
         self.amount *= conversions.get_factor(self.unit, new_unit)
         self.unit = new_unit
