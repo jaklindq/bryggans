@@ -1,0 +1,18 @@
+{
+  "house": {
+    "diameter": 0.18,
+    "circle_sector_angle_deg": 270
+  },
+  "tube": {
+    "inner_diameter": 0.010,
+    "outer_diameter": 0.012
+  },
+  "motor": {
+    "model": "eta_prototype",
+    "rpm": 200
+  },
+  "rotor": {
+    "number_of_arms": 2,
+    "spring_constant": 14
+  }
+}
