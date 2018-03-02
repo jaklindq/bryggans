@@ -1,3 +1,7 @@
+"""Ingredient: Hop"""
+import conversions
+
+
 class Hop(object):
     """Hop class
 
@@ -46,3 +50,13 @@ class Hop(object):
                     self.time = float(node.text)
                 else:
                     print('{} already set: {}'.format(node.tag, self.time))
+
+    def convert_unit(self, new_unit):
+        """Convert unit measuring hop amount
+
+        Args:
+            new_unit (str): Resulting unit
+        """
+        # TODO: Make unit check
+        self.amount *= conversions.get_factor(self.unit, new_unit)
+        self.unit = new_unit

@@ -1,3 +1,7 @@
+"""Ingredient: Fermentable"""
+import conversions
+
+
 class Fermentable(object):
     """Fermentable class
 
@@ -38,3 +42,13 @@ class Fermentable(object):
                     self._type = node.text
                 else:
                     print('{} already set: {}'.format(node.tag, self._type))
+
+    def convert_unit(self, new_unit):
+        """Convert unit measuring fermentable amount
+
+        Args:
+            new_unit (str): Resulting unit
+        """
+        # TODO: Make unit check
+        self.amount *= conversions.get_factor(self.unit, new_unit)
+        self.unit = new_unit

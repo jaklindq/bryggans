@@ -28,39 +28,49 @@ class Recipe(object):
         Args:
             xml_file_path (str): Path to recipe file
         """
-        root = self._parse_bxml(xml_file_path)
+        try:
+            tree = parse_bxml(xml_file_path)
+            if tree:
+                root = tree.getroot()
+            else:
+                root = None
+        except etree.ParseError as parse_err:
+            root = None
+            print('Error parsing tree: {}'.format(xml_file_path))
+            print(parse_err)
 
-        for node in root:
-            for child in list(node):
-                if child.tag == 'NAME':
-                    if self.name is None:
-                        self.name = child.text
-                    else:
-                        print('{} already set: {}'.format(child.tag, self.name))
+        if root:
+            for node in root:
+                for child in list(node):
+                    if child.tag == 'NAME':
+                        if self.name is None:
+                            self.name = child.text
+                        else:
+                            print('{} already set: {}'.format(child.tag, self.name))
 
-                if child.tag == 'VERSION':
-                    if self.version is None:
-                        self.version = child.text
-                    else:
-                        print('{} already set: {}'.format(child.tag, self.version))
+                    if child.tag == 'VERSION':
+                        if self.version is None:
+                            self.version = child.text
+                        else:
+                            print('{} already set: {}'.format(child.tag, self.version))
 
-                if child.tag == 'BATCH_SIZE':
-                    if self.batch_size is None:
-                        self.batch_size = float(child.text)
-                    else:
-                        print('{} already set: {}l'.format(child.tag, self.batch_size))
+                    if child.tag == 'BATCH_SIZE':
+                        if self.batch_size is None:
+                            self.batch_size = float(child.text)
+                        else:
+                            print('{} already set: {}l'.format(child.tag, self.batch_size))
 
-                if child.tag == 'HOPS':
-                    if self. hop_list is None:
-                        self._add_hops(child)
-                    else:
-                        print('Multiple hops tags')
+                    if child.tag == 'HOPS':
+                        if self. hop_list is None:
+                            self._add_hops(child)
+                        else:
+                            print('Multiple hops tags')
 
-                if child.tag == 'FERMENTABLES':
-                    if self. fermentables_list is None:
-                        self._add_fermentables(child)
-                    else:
-                        print('Multiple fermentables tags')
+                    if child.tag == 'FERMENTABLES':
+                        if self. fermentables_list is None:
+                            self._add_fermentables(child)
+                        else:
+                            print('Multiple fermentables tags')
 
     def _add_hops(self, hops_root):
         """Read HOPS tag and create Hop() instances
@@ -97,16 +107,24 @@ class Recipe(object):
 
         self.fermentables_list = tmp_fermentables_list
 
-    @staticmethod
-    def _parse_bxml(xml_file_path):
-        """Create etree object from xml-file
 
-        Args:
-            xml_file_path (str): Path to recipe file
-        """
+def parse_bxml(xml_file_path):
+    """Create etree object from xml-file
+
+    Args:
+        xml_file_path (str): Path to recipe file
+    """
+    try:
         with open(xml_file_path, 'rt') as xml_file:
             tree = etree.parse(xml_file)
-            return tree.getroot()
+    except etree.ParseError as parse_err:
+        print(parse_err)
+        tree = None
+    except FileNotFoundError as file_error:
+        print(file_error)
+        tree = None
+
+    return tree
 
 
 def sum_list(obj_list):
@@ -119,7 +137,7 @@ def sum_list(obj_list):
     """
     sum_dict = {}
     if obj_list:
-        list_element_type = type(obj_list[0])
+        list_element_type = type(obj_list[0])  # Use any list item as starting comparison
         if all(isinstance(inst, list_element_type) for inst in obj_list):
             for obj in obj_list:
                 try:
