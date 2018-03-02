@@ -1,0 +1,84 @@
+\documentclass[a4paper,11pt,oneside]{article}
+\usepackage{a4wide}                     % Iets meer tekst op een bladzijde
+\usepackage[swedish]{babel}   % Voor nederlandstalige hyphenatie (woordsplitsing)
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}                    % Uitgebreide wiskundige mogelijkheden
+\usepackage{amssymb}                    % Voor speciale symbolen zoals de verzameling Z, R...
+\usepackage{url}                        % Om url's te verwerken
+\usepackage{graphicx}                   % Om figuren te kunnen verwerken
+\usepackage[small,bf,hang]{caption}    % Om de captions wat te verbeteren
+\usepackage{xspace}                     % Magische spaties na een commando
+%\usepackage[latin1]{inputenc}           % Om niet ascii karakters rechtstreeks te kunnen typen
+\usepackage{float}                      % Om nieuwe float environments aan te maken. Ook optie H!
+\usepackage{flafter}                    % Opdat floats niet zouden voorsteken
+\usepackage{listings}                   % Voor het weergeven van letterlijke text en codelistings
+\usepackage{marvosym}                   % Om het euro symbool te krijgen
+\usepackage{textcomp}                   % Voor onder andere graden celsius
+\usepackage[left=2.5cm,top=1.4cm,right=1.5cm,bottom=25mm,nohead]{geometry}   % marges instellen
+\usepackage{helvet}		% We gebruiken Helvetica.  Arial is de Microsoft-versie van Helvetica.  Dit wijzigt de schreefloze letters in helvetica, de rest blijft zoals standaard.
+\usepackage{fancyhdr}                   % Voor fancy headers en footers.
+\pagestyle{fancy}                       % De bladzijdestijl
+\usepackage{graphics}                   % Om figuren te verwerken.
+\usepackage{lastpage}										% Om aan de laatste pagina te kunnen.
+\newcommand{\npar}{\vspace{0.5cm} \par \noindent}      % witruimte aan paragrafen
+
+
+% begin van het document
+\begin{document}
+\sffamily               % We gebruiken overal een schreefloze letter (hier dus Helvetica)
+
+
+% Header (titel en datum aanpassen)
+\fancyhf{}                              % Resetten fancy settings.
+\renewcommand{\headrulewidth}{0pt}      % Geen lijn onder de header.
+\hspace{-7mm}\begin{tabular}{p{50mm}c}
+\includegraphics[width=40mm]{logo.png}& 
+	\begin{tabular*}{120mm}[b]{c}
+	\huge{Kallelse till årsstämma} \\
+	\vspace{1cm}\\
+	\Large{6 november 2017} \\
+	\end{tabular*}
+\end{tabular}
+\vspace{1cm}
+
+
+% De footer
+{ 
+\lfoot{ \sffamily 
+        \vspace{1ex} \small
+			Bryggans bryggeri\\
+            Årsstämma 2017\\
+}
+\rfoot{ \sffamily
+				\vspace{1ex} \small
+				Sida \thepage/\pageref{LastPage}\\
+				www.bryggansbryggeri.se
+        \vspace{1.9ex} \small
+}
+}\renewcommand{\footrulewidth}{0.1pt}
+
+
+% De inhoud
+\section*{\sffamily Bakgrund}
+Acktjeägarna i Bryggans bryggeri kallas härmed till årsstämma. Efter ett första framgångsrikt år är det dags för styrelsen att sammanfatta de kvartal som gått och blicka framåt. Utanför styrelsens kontroll finns ett acktjeinnehav som asymptotiskt närmar sig noll men detta kan ändå vara ett ljuvligt tillfälle för föreningsliv och insyn i verksamheten på ert egna bryggeri.\\
+\textbf{Tid:} 17.00\\
+\textbf{Plats:} Bryggeriet eller humlegården\\
+
+
+\section*{\sffamily Förslag till dagordning}
+\begin{itemize}
+\item Rundtur på bryggeriet/humlegården
+\item \textbf{Öl:} Provsmakning av den nya Wes Andersson-serien
+\item Styrelsens årsberättelse
+\item Verksamhetsplan
+\item \textbf{Öl:} Till middagen
+\item Godkännande av investering i digitalt vattenlås
+\item Ansvarsfrihet för styrelsen
+\item \textbf{Öl:} Provsmakning av kommande julöl
+\item Val av humlegårdsföreståndare
+\item Val av finsnickare
+\item Fastställande av bonusar till styrelsen
+\item Fastställande av utdelningsnivåer
+\end{itemize}
+
+\end{document}
