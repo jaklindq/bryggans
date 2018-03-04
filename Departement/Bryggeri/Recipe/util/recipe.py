@@ -131,6 +131,7 @@ def sum_list(obj_list):
     """Aggregate an ingredient list to total amount
 
     Takes any list of ingredient objects that has attributes amount and name
+    Sums all amounts with the same name
 
     Args:
         obj_list (list): List of ingredients objects
