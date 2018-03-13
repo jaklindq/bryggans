@@ -1,7 +1,7 @@
 FROM python:3
 MAINTAINER Bryggans Bryggeri HB
-COPY confs /app
+COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
-CMD ["app.py"]
+CMD ["src/app.py"]
