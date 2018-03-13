@@ -1,3 +1,4 @@
 .idea/
 *.pyc
+*README.html
 *__pychache__/
