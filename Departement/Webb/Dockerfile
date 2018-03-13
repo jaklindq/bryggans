@@ -3,5 +3,6 @@ MAINTAINER Bryggans Bryggeri HB
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+# Can't get this to work just yet
+#  ENTRYPOINT ["python"]
+#  CMD ["app.py"]
