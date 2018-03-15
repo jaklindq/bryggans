@@ -1,0 +1,19 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+      <h1>{{recipe.name}}</h1>
+      <h3>Malt:</h3>
+      <ul>
+          {% for malt in recipe.fermentables_list %}
+          <li>{{malt.amount}}{{malt.unit}} {{malt.name}}</li>
+          {% endfor %}
+      </ul>
+      <h3>Humle:</h3>
+          <ul>
+              {% for hop in recipe.hop_list %}
+              <li>{{hop.amount}}{{hop.unit}} {{hop.name}}</li>
+              {% endfor %}
+          </ul>
+</html>
