@@ -20,11 +20,16 @@ def get_factor(old_unit, new_unit):
         old_unit (str): Old unit
         new_unit (str): New unit
     """
-    try:
-        # TODO: Check if args are valid
-        factor = CONVERSION_TABLE[old_unit][new_unit]
-    except KeyError as key_err:
+    from_ = CONVERSION_TABLE.get(old_unit)
+    if from_:
+        to = from_.get(new_unit)
+        if to:
+            factor = 2
+        else:
+            factor = 1
+            print('Invalid new unit. Unit not converted')
+    else:
         factor = 1
-        print('Invalid unit: {}\nUnit not converted'.format(key_err))
+        print('Invalid old unit. Unit not converted')
 
     return factor

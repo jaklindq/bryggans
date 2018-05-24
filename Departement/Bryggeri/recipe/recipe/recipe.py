@@ -19,8 +19,8 @@ class Recipe(object):
         self.name = None
         self.version = None
         self.batch_size = None
-        self.hop_list = None
-        self.fermentables_list = None
+        self.hop_list = list()
+        self.fermentables_list = list()
 
     def recipe_from_bxml(self, xml_file_path):
         """Parse beer-XML recipe file
@@ -78,16 +78,16 @@ class Recipe(object):
         Args:
             hops_root (etree element): Root element for all hops
         """
-        tmp_hops_list = []
         for node in hops_root:
             if node.tag == 'HOP':
                 hop = Hop()
                 hop.init_from_xml_obj(node)
-                tmp_hops_list.append(hop)
+                if hop:
+                    self.hop_list.append(hop)
+                else:
+                    print("Hop object not added", node)
             else:
                 print('Erroneous tag')
-
-        self.hop_list = tmp_hops_list
 
     def _add_fermentables(self, fermentables_root):
         """Read FERMENTABLES tag and create Fermentable() instances
@@ -96,16 +96,16 @@ class Recipe(object):
 
             fermentables_root (etree element): Root element for all fermentables
         """
-        tmp_fermentables_list = []
         for node in fermentables_root:
             if node.tag == 'FERMENTABLE':
                 fermentable = Fermentable()
                 fermentable.init_from_xml_obj(node)
-                tmp_fermentables_list.append(fermentable)
+                if fermentable:
+                    self.fermentables_list.append(fermentable)
+                else:
+                    print("Fermentable object not added", node)
             else:
                 print('Erroneous tag')
-
-        self.fermentables_list = tmp_fermentables_list
 
 
 def parse_bxml(xml_file_path):
