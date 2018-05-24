@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name ULN2003)(type Legacy)(uri /home/jakob/bryggans/Departement/Elektrotekniska/third_party/component/ULN2003.mod)(options "")(descr ""))
+)
