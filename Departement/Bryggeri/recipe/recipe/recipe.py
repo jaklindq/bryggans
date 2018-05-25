@@ -133,16 +133,12 @@ def sum_list(obj_list):
     sum_dict = {}
     if obj_list:
         list_element_type = type(obj_list[0])  # Use any list item as starting comparison
-        if all(isinstance(inst, list_element_type) for inst in obj_list):
+        if all(isinstance(obj, list_element_type) for obj in obj_list):
             for obj in obj_list:
-                try:
-                    if obj.name in sum_dict.keys():
-                        sum_dict[obj.name] += obj.amount
-                    else:
-                        sum_dict[obj.name] = obj.amount
-                except AttributeError as err:
-                    print('Wrong object type. {}'.format(err))
-
+                if sum_dict.get(obj.name):
+                    sum_dict[obj.name] += obj.amount
+                else:
+                    sum_dict[obj.name] = obj.amount
     else:
         print('Empty list')
 
