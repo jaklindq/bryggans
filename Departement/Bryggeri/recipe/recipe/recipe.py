@@ -1,4 +1,5 @@
 """Handle recipes in beer-XML format"""
+import os
 from xml.etree import ElementTree as etree
 from hop import Hop
 from fermentable import Fermentable
@@ -61,13 +62,13 @@ class Recipe(object):
                             print('{} already set: {}l'.format(child.tag, self.batch_size))
 
                     if child.tag == 'HOPS':
-                        if self. hop_list is None:
+                        if not self. hop_list:
                             self._add_hops(child)
                         else:
                             print('Multiple hops tags')
 
                     if child.tag == 'FERMENTABLES':
-                        if self. fermentables_list is None:
+                        if not self. fermentables_list:
                             self._add_fermentables(child)
                         else:
                             print('Multiple fermentables tags')
@@ -157,9 +158,10 @@ def sum_list(obj_list):
 
 def main():
     """Main entry point for recipes"""
-    recipe_file = '/home/jakob/bryggans/Departement/Bryggeri/Recipe/xml/kalaslager.xml'
+    recipe_root_dir = '/home/jakob/personal/bryggans/Departement/Bryggeri/recept_arkiv'
+    recipe_file = 'kalaslager.xml'
     recipe = Recipe()
-    recipe.recipe_from_bxml(recipe_file)
+    recipe.recipe_from_bxml(os.path.join(recipe_root_dir, recipe_file))
 
 
 if __name__ == '__main__':

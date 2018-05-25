@@ -1,8 +1,9 @@
 """Ingredient: Hop"""
+from ingredient import Ingredient
 import conversions
 
 
-class Hop(object):
+class Hop(Ingredient):
     """Hop class
 
     Attributes:
@@ -26,19 +27,8 @@ class Hop(object):
         Args:
             root (etree element): Root hops element
         """
+        super(self.__class__, self).init_from_xml_obj(root)
         for node in root:
-            if node.tag == 'NAME':
-                if self.name is None:
-                    self.name = node.text
-                else:
-                    print('{} already set: {}'.format(node.tag, self.name))
-
-            if node.tag == 'AMOUNT':
-                if self.amount is None:
-                    self.amount = float(node.text)
-                else:
-                    print('{} already set: {}'.format(node.tag, self.amount))
-
             if node.tag == 'ALPHA':
                 if self.alpha is None:
                     self.alpha = float(node.text)
@@ -61,3 +51,6 @@ class Hop(object):
         new_unit = new_unit.lower()
         self.amount *= conversions.get_factor(self.unit, new_unit)
         self.unit = new_unit
+
+    def print(self):
+        pass
