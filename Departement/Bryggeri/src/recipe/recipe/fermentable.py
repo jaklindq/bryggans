@@ -1,4 +1,5 @@
 """Ingredient: Fermentable"""
+import logging
 from ingredient import Ingredient
 import conversions
 
@@ -18,6 +19,7 @@ class Fermentable(Ingredient):
         self.amount = None
         self.unit = 'kg'
         self._type = None  # Avoid conflict with restricted word "type"
+        self._log = logging.getLogger(self.__class__.__name__)
 
     def init_from_xml_obj(self, root):
         """Parse FERMENTABLE etree object and store tags
@@ -31,7 +33,7 @@ class Fermentable(Ingredient):
                 if self._type is None:
                     self._type = node.text
                 else:
-                    print('{} already set: {}'.format(node.tag, self._type))
+                    self._log.warning('{} already set: {}'.format(node.tag, self._type))
 
     def convert_unit(self, new_unit):
         """Convert unit measuring fermentable amount

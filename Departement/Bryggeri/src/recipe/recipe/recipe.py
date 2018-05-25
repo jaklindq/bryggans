@@ -1,8 +1,17 @@
 """Handle recipes in beer-XML format"""
 import os
+import sys
+import logging
+from datetime import datetime
 from xml.etree import ElementTree as etree
 from hop import Hop
 from fermentable import Fermentable
+
+# FULHACK
+SRC_ROOT = '/home/jakob/personal/bryggans/Departement/Bryggeri/src'
+sys.path.append(os.path.join(SRC_ROOT, 'util'))
+from log import setup_logger
+logger = logging.getLogger(__name__)
 
 
 class Recipe(object):
@@ -22,6 +31,7 @@ class Recipe(object):
         self.batch_size = None
         self.hop_list = list()
         self.fermentables_list = list()
+        self._log = logging.getLogger(self.__class__.__name__)
 
     def recipe_from_bxml(self, xml_file_path):
         """Parse beer-XML recipe file
@@ -39,8 +49,7 @@ class Recipe(object):
                 root = None
         except etree.ParseError as parse_err:
             root = None
-            print('Error parsing tree: {}'.format(xml_file_path))
-            print(parse_err)
+            self._log.error('Error parsing tree: {}. {}'.format(xml_file_path, parse_err))
 
         if root:
             for node in root:
@@ -49,35 +58,34 @@ class Recipe(object):
                         if self.name is None:
                             self.name = child.text
                         else:
-                            print('{} already set: {}'.format(child.tag, self.name))
+                            self._log.warning('{} already set: {}'.format(child.tag, self.name))
 
                     if child.tag == 'VERSION':
                         if self.version is None:
                             self.version = child.text
                         else:
-                            print('{} already set: {}'.format(child.tag, self.version))
+                            self._log.warning('{} already set: {}'.format(child.tag, self.version))
 
                     if child.tag == 'BATCH_SIZE':
                         if self.batch_size is None:
                             self.batch_size = float(child.text)
                         else:
-                            print('{} already set: {}l'.format(child.tag, self.batch_size))
+                            self._log.warning('{} already set: {}l'.format(child.tag, self.batch_size))
 
                     if child.tag == 'HOPS':
                         if not self. hop_list:
                             self.hop_list = self._add_ingredient(child, Hop, 'HOP')
                         else:
-                            print('Multiple hops tags')
+                            self._log.warning('Multiple hops tags')
 
                     if child.tag == 'FERMENTABLES':
                         if not self. fermentables_list:
                             self.fermentables_list = self._add_ingredient(child, Fermentable,
                                                                           'FERMENTABLE')
                         else:
-                            print('Multiple fermentables tags')
+                            self._log.warning('Multiple fermentables tags')
 
-    @staticmethod
-    def _add_ingredient(root, ingredient_class, xml_tag):
+    def _add_ingredient(self, root, ingredient_class, xml_tag):
         """Read ingredient type tag and create a list of all matching entries
 
         Args:
@@ -96,9 +104,9 @@ class Recipe(object):
                 if instance:
                     ingredient_list.append(instance)
                 else:
-                    print("Object not added", node)
+                    self._log.error("{} not added".format(node.tag))
             else:
-                print('Erroneous tag')
+                self._log.error('Erroneous tag')
         return ingredient_list
 
 
@@ -112,10 +120,10 @@ def parse_bxml(xml_file_path):
         with open(xml_file_path, 'rt') as xml_file:
             tree = etree.parse(xml_file)
     except etree.ParseError as parse_err:
-        print(parse_err)
+        logger.error(parse_err)
         tree = None
     except FileNotFoundError as file_error:
-        print(file_error)
+        logger.error(file_error)
         tree = None
 
     return tree
@@ -147,11 +155,13 @@ def sum_list(obj_list):
 
 def main():
     """Main entry point for recipes"""
+    log_file = '{}.log'.format(datetime.now().strftime('%Y%m%d_%H%M%S'))
+    setup_logger(log_path=os.path.join(SRC_ROOT, 'log',  log_file))
     recipe_root_dir = '/home/jakob/personal/bryggans/Departement/Bryggeri/recept_arkiv'
     recipe_file = 'kalaslager.xml'
     recipe = Recipe()
     recipe.recipe_from_bxml(os.path.join(recipe_root_dir, recipe_file))
-    print(sum_list(recipe.fermentables_list))
+    logger.info(sum_list(recipe.fermentables_list))
 
 
 if __name__ == '__main__':

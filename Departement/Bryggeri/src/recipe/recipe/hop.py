@@ -1,4 +1,5 @@
 """Ingredient: Hop"""
+import logging
 from ingredient import Ingredient
 import conversions
 
@@ -20,6 +21,7 @@ class Hop(Ingredient):
         self.unit = 'g'
         self.alpha = None
         self.time = None
+        self._log = logging.getLogger(self.__class__.__name__)
 
     def init_from_xml_obj(self, root):
         """Parse etree object and look for HOPS tags
