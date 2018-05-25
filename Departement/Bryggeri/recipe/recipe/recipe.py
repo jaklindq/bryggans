@@ -25,6 +25,8 @@ class Recipe(object):
 
     def recipe_from_bxml(self, xml_file_path):
         """Parse beer-XML recipe file
+        TODO: Better way to parse tags?
+        TODO: Collect ingredients in typ tuple: (class, xml_tag, recipe_list) call _add_ing. dyn
 
         Args:
             xml_file_path (str): Path to recipe file
@@ -63,50 +65,41 @@ class Recipe(object):
 
                     if child.tag == 'HOPS':
                         if not self. hop_list:
-                            self._add_hops(child)
+                            self.hop_list = self._add_ingredient(child, Hop, 'HOP')
                         else:
                             print('Multiple hops tags')
 
                     if child.tag == 'FERMENTABLES':
                         if not self. fermentables_list:
-                            self._add_fermentables(child)
+                            self.fermentables_list = self._add_ingredient(child, Fermentable,
+                                                                          'FERMENTABLE')
                         else:
                             print('Multiple fermentables tags')
 
-    def _add_hops(self, hops_root):
-        """Read HOPS tag and create Hop() instances
+    @staticmethod
+    def _add_ingredient(root, ingredient_class, xml_tag):
+        """Read ingredient type tag and create a list of all matching entries
 
         Args:
-            hops_root (etree element): Root element for all hops
+            root (etree element): Root element for an ingredient type
+            ingredient_class (Ingredient subclass constructor)
+            xml_tag (str)
+
+        Returns:
+            ingredient_list (list): List of ingredient_class instances
         """
-        for node in hops_root:
-            if node.tag == 'HOP':
-                hop = Hop()
-                hop.init_from_xml_obj(node)
-                if hop:
-                    self.hop_list.append(hop)
+        ingredient_list = list()
+        for node in root:
+            if node.tag == xml_tag:
+                instance = ingredient_class()
+                instance.init_from_xml_obj(node)
+                if instance:
+                    ingredient_list.append(instance)
                 else:
-                    print("Hop object not added", node)
+                    print("Object not added", node)
             else:
                 print('Erroneous tag')
-
-    def _add_fermentables(self, fermentables_root):
-        """Read FERMENTABLES tag and create Fermentable() instances
-
-        Args:
-
-            fermentables_root (etree element): Root element for all fermentables
-        """
-        for node in fermentables_root:
-            if node.tag == 'FERMENTABLE':
-                fermentable = Fermentable()
-                fermentable.init_from_xml_obj(node)
-                if fermentable:
-                    self.fermentables_list.append(fermentable)
-                else:
-                    print("Fermentable object not added", node)
-            else:
-                print('Erroneous tag')
+        return ingredient_list
 
 
 def parse_bxml(xml_file_path):
@@ -162,6 +155,7 @@ def main():
     recipe_file = 'kalaslager.xml'
     recipe = Recipe()
     recipe.recipe_from_bxml(os.path.join(recipe_root_dir, recipe_file))
+    print(sum_list(recipe.fermentables_list))
 
 
 if __name__ == '__main__':
