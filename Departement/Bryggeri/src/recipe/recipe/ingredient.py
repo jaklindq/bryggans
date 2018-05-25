@@ -9,10 +9,10 @@ class Ingredient(ABC):
     """Meta class for all ingredient objects
 
     Attributes:
-    name (str)
-    amount (float)
+        name (str)
+        amount (float)
     """
-
+    @abstractmethod
     def __init__(self):
         self.name = None
         self.amount = None

@@ -1,5 +1,4 @@
 """Ingredient: Fermentable"""
-import logging
 from ingredient import Ingredient
 import conversions
 
@@ -15,11 +14,9 @@ class Fermentable(Ingredient):
 
     """
     def __init__(self):
-        self.name = None
-        self.amount = None
+        super(self.__class__, self).__init__()
         self.unit = 'kg'
         self._type = None  # Avoid conflict with restricted word "type"
-        self._log = logging.getLogger(self.__class__.__name__)
 
     def init_from_xml_obj(self, root):
         """Parse FERMENTABLE etree object and store tags
