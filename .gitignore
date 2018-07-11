@@ -2,3 +2,9 @@
 *.pyc
 *README.html
 *__pychache__/
+
+# KICAD
+*.bak
+.*kicad*bak
+*.bck
+
