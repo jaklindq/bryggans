@@ -1,10 +1,9 @@
-.idea/
+*.idea/
 *.pyc
 *README.html
-*__pychache__/
-
+*__pychache__
+*/log/
 # KICAD
 *.bak
 .*kicad*bak
 *.bck
-
