@@ -1,0 +1,57 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CRYDOM
+D Random Phase Opto-Triac, Vdrm 250V, Ift 15mA, DIP6
+K Opto-Triac Opto Triac Random Phase
+F http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf
+$ENDCMP
+#
+$CMP MOC3011M
+D Random Phase Opto-Triac, Vdrm 250V, Ift 10mA, DIP6
+K Opto-Triac Opto Triac Random Phase
+F http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf
+$ENDCMP
+#
+$CMP MOC3012M
+D Random Phase Opto-Triac, Vdrm 250V, Ift 5mA, DIP6
+K Opto-Triac Opto Triac Random Phase
+F http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf
+$ENDCMP
+#
+$CMP MOC3020M
+D Random Phase Opto-Triac, Vdrm 400V, Ift 30mA, DIP6
+K Opto-Triac Opto Triac Random Phase
+F http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf
+$ENDCMP
+#
+$CMP MOC3021M
+D Random Phase Opto-Triac, Vdrm 400V, Ift 15mA, DIP6
+K Opto-Triac Opto Triac Random Phase
+F http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf
+$ENDCMP
+#
+$CMP MOC3022M
+D Random Phase Opto-Triac, Vdrm 400V, Ift 10mA, DIP6
+K Opto-Triac Opto Triac Random Phase
+F http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf
+$ENDCMP
+#
+$CMP MOC3023M
+D Random Phase Opto-Triac, Vdrm 400V, Ift 5mA, DIP6
+K Opto-Triac Opto Triac Random Phase
+F http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf
+$ENDCMP
+#
+$CMP MOC3051M
+D Random Phase Opto-Triac, Vdrm 600V, Ift 15mA, DIP6
+K Opto-Triac Opto Triac Random Phase
+F http://www.fairchildsemi.com/ds/MO/MOC3052M.pdf
+$ENDCMP
+#
+$CMP MOC3052M
+D Random Phase Opto-Triac, Vdrm 600V, Ift 10mA, DIP6
+K Opto-Triac Opto Triac Random Phase
+F http://www.fairchildsemi.com/ds/MO/MOC3052M.pdf
+$ENDCMP
+#
+#End Doc Library
