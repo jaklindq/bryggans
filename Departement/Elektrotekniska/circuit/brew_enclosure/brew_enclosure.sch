@@ -354,13 +354,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 11700 11200 11700
 Wire Wire Line
-	6350 11700 6350 11950
-Wire Wire Line
-	8750 11700 8750 11950
-Connection ~ 6350 11700
-Wire Wire Line
 	11200 11700 11200 11950
-Connection ~ 8750 11700
 Wire Wire Line
 	2900 11950 2900 1000
 Wire Wire Line
@@ -534,4 +528,10 @@ Wire Wire Line
 Wire Wire Line
 	4900 6700 10600 6700
 Connection ~ 10600 6700
+Wire Wire Line
+	6350 11950 6350 11800
+Wire Wire Line
+	6350 11800 8750 11800
+Wire Wire Line
+	8750 11800 8750 11950
 $EndSCHEMATC
