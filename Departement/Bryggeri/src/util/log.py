@@ -13,8 +13,8 @@ def setup_logger(log_path=None, logger=None, debug=False, fmt=LOG_FORMAT):
         debug (bool, optional): Log mode
         logger (logging.Logger, optional): logger to configure, root logger if None
         fmt (str, optional): message format
-
     """
+
     logger = logger if logger else logging.getLogger()
     fmt = logging.Formatter(fmt=fmt)
     stream_handler = logging.StreamHandler()
