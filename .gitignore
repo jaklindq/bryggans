@@ -5,5 +5,7 @@
 */log/
 # KICAD
 *.bak
-.*kicad*bak
+*kicad*bak
+*-cache.lib
 *.bck
+
