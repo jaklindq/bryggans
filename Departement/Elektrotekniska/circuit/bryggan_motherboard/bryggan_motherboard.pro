@@ -1,4 +1,4 @@
-update=ons 25 jul 2018 17:04:50
+update=tis 13 nov 2018 21:56:30
 version=1
 last_client=kicad
 [cvpcb]
@@ -109,3 +109,4 @@ LibName74=video
 LibName75=Xicor
 LibName76=xilinx
 LibName77=Zilog
+LibName78=project_libs/bryggan_motherboard
