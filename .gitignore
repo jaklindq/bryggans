@@ -8,4 +8,6 @@
 *kicad*bak
 *-cache.lib
 *.bck
-
+tags
+.hypothesis
+*.egg-info
